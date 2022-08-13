@@ -1,8 +1,9 @@
 from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Driver
+
+from driver.models import Driver
+from driver.service import DriverFilter
 from .serializers import DriverSerializer
-from .service import DriverFilter
 
 
 class DriverAPIListCreate(generics.ListCreateAPIView):

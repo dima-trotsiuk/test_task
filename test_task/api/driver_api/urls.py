@@ -1,9 +1,8 @@
 from django.urls import path
 
-from .api import DriverAPIListCreate, DriverAPIRetrieveUpdateDestroy
+from .views import DriverAPIListCreate, DriverAPIRetrieveUpdateDestroy
 
-
-urlpatterns = [
+driver_urlpatterns = [
     path('driver/', DriverAPIListCreate.as_view()),
     path('driver/<int:pk>/', DriverAPIRetrieveUpdateDestroy.as_view()),
 ]
